@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resume | Suebpong Sunsujjanont</title>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+body{
+  margin:0;
+  font-family:system-ui,sans-serif;
+  background:#f8fafc;
+  color:#1f2937;
+}
+header{
+  background:linear-gradient(135deg,#2563eb,#1e3a8a);
+  color:#fff;
+  padding:40px;
+}
+section{
+  max-width:1200px;
+  margin:40px auto;
+  padding:0 20px;
+}
+.card{
+  background:#fff;
+  border-radius:14px;
+  padding:25px;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+  margin-bottom:40px;
+}
+h1,h2{margin-top:0}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:30px;
+}
+canvas{max-height:350px}
+footer{
+  text-align:center;
+  padding:30px;
+  color:#64748b;
+}
+
+        .main-content {
+            flex: 2;
+            padding: 40px;
+        }
+        .sidebar {
+            flex: 1;
+            background-color: var(--accent-bg);
+            padding: 40px;
+        }
+
+        /* Profile Section */
+        .profile-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-right: 25px;
+            object-fit: cover;
+            border: 4px solid var(--primary-color);
+            box-shadow: 0 0 15px rgba(0, 128, 128, 0.3);
+        }
+        .name-title h1 {
+            font-size: 2.5em;
+            margin: 0;
+            font-weight: 700;
+        }
+        .name-title p {
+            margin: 0;
+            color: #555;
+            font-size: 1.1em;
+        }
+
+        /* Contact Info in Sidebar */
+        .contact-info p {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .contact-info i {
+            margin-right: 10px;
+            color: var(--primary-color);
+            font-size: 1.1em;
+        }
+
+        /* Experience and Education Items */
+        .item {
+            margin-bottom: 25px;
+        }
+        .item h3 {
+            font-size: 1.2em;
+            margin-bottom: 5px;
+            color: var(--text-color);
+            font-weight: 600;
+        }
+        .item p.subtitle {
+            font-style: italic;
+            color: #777;
+            margin-top: 0;
+            font-size: 0.9em;
+        }
+
+        /* Skills Section (Modern Progress Bars) */
+        .skills-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .skill-item {
+            margin-bottom: 18px;
+        }
+        .skill-name {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            margin-bottom: 8px;
+            font-size: 0.95em;
+        }
+        .progress-bar-container {
+            background-color: #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            height: 12px;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .progress-bar {
+            background: linear-gradient(to right, var(--primary-color), #00bfa5);
+            height: 100%;
+            text-align: right;
+            transition: width 1s ease-in-out;
+            border-radius: 8px 0 0 8px;
+        }
+        .duration {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                margin: 0;
+                border-radius: 0;
+            }
+            .sidebar {
+                order: -1;
+            }
+            .main-content, .sidebar {
+                padding: 20px;
+            }
+        }	
+</style>
+</head>
+
+<body>
+
+<a href="CV_Suebpong2025.doc" download
+   style="
+     display:inline-block;
+     margin-top:15px;
+     padding:12px 24px;
+     background:#22c55e;
+     color:#fff;
+     border-radius:10px;
+     text-decoration:none;
+     font-weight:600;
+     box-shadow:0 6px 15px rgba(0,0,0,.15);
+   ">
+  📄 ดาวน์โหลดไฟล์ Resume (DOC)
+</a>
+
+<a href="CV_Suebpong2025.pdf" download
+   style="
+     display:inline-block;
+     margin-top:15px;
+     padding:12px 24px;
+     background:#22c55e;
+     color:#fff;
+     border-radius:10px;
+     text-decoration:none;
+     font-weight:600;
+     box-shadow:0 6px 15px rgba(0,0,0,.15);
+   ">
+  📄 ดาวน์โหลดไฟล์ Resume (PDF)
+</a>
+
+    <div class="container">
+        <div class="main-content">
+            <header class="profile-header">
+                <!-- Image source changed to your provided image file name -->
+                <img src="profile-pic.jpg" alt="Profile Picture" class="profile-pic">
+                <div class="name-title">
+                    <h1>นายสืบพงษ์ สรรสัจจะนนท์</h1>
+                    <p><b>Senior Programmer</b></p>
+                </div>
+            </header>
+
+<section>
+<div class="card">
+<h2>ข้อมูลส่วนตัว</h2>
+<div class="grid">
+  <div>
+    <p><b>เกิดวันที่:</b> 2 Feb 1979</p>  
+    <p><b>อายุ:</b> 47 ปี</p>
+    <p><b>Email:</b> sunsujjanont@gmail.com</p>
+	<p><b>ที่อยู่:</b> 61/185 หมู่บ้านภัทรนิเวศน์ ซอย 11, ตำบลบางเมือง อำเภอเมืองสมุทรปราการ สมุทรปราการ 10270</p>	
+  </div>
+  <div>
+    <p><b>ประสบการณ์รวม:</b> มากกว่า 20 ปี</p>
+    <p><b>เงินเดือนที่คาดหวัง:</b> 80,000 – 90,000 บาท</p>
+    <p><b>เบอร์โทร:</b> **063-896-6600**</p>
+  </div>
+</div>
+</div>
+</section>
+
+
+            <section class="section">
+                <h2><i class="fas fa-briefcase"></i> ประวัติการทำงาน</h2>
+                <div class="item">
+                    <h3>บจก. ซีพีเอส คอนซลัทงิ่</h3>
+                    <p class="subtitle">Senior Programmer | พ.ศ. 2558-ปัจจุบัน (9 ปี 5 เดือน)</p>
+                    <ul>
+                        <li>จัดเขียนปรับระบบงานเพิ่มเติม เพิ่มเติมหน้าจอ, เพิ่มรายงาน แก้ไขรายงาน ใน Module PR, PO, AR, AP, GL, Budget ระบบ Oracle ERP โดยใช้ tools oracle form, report โดยใช้ภาษา SQL, PL/SQL</li>
+                        <li>สร้าง API เพื่อเชื่อมต่อ ทั้งนำเข้าข้อมูลและส่งออกข้อมูล โดยใช้ทั้ง tools Nodejs JavaScript สร้างจาก Oracle SOA</li>
+                        <li>สร้าง แก้ไข รายงานรูปแบบ template Rtf ดึงข้อมูลผ่าน XML data</li>
+                        <li>สร้างรายงาน กราฟ tag cloud และรายงานนำเสนอการเชื่อมโยงข้อมูล จาก Oracle ECC</li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <h3>บจก. ไทยอินเตอร์เมชั่น ซิสเต็ม</h3>
+                    <p class="subtitle">Senior Programmer | พ.ศ. 2548-2558</p>
+                    <ul>
+                        <li>วางระบบงานเช่า ขาย อสังหาริมทรัพย์ด้วยซอฟต์แวร์ Oracle Developers</li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <h3>บจก. อวาแลนท์</h3>
+                    <p class="subtitle">Software Engineer | พ.ศ. 2546-2548</p>
+                    <ul>
+                        <li>เขียนโปรแกรมภาษา Java กับระบบงาน แบงค์ ประกันภัย โดย Java Developers by IBM Webshere</li>
+                    </ul>
+                </div>
+                 <div class="item">
+                    <h3>บจก. จี-เอเบิล (CDG Group)</h3>
+                    <p class="subtitle">Programmer | พ.ศ. 2545-2546</p>
+                    <ul>
+                        <li>เขียนโปรแกรมตามที่ได้รับมอบหมายโดยใช้ tools Oracle Developers Form ตามงานที่ได้รับมอบหมายในระบบจัดซื้อ จัดจ้าง ของ มหาลัยอุบลราชธานี</li>
+                    </ul>
+                </div>
+                 <div class="item">
+                    <h3>บจก. ดิจิตัล เอ็กซ์พีเรียน</h3>
+                    <p class="subtitle">Programmer | พ.ศ. 2544-2546</p>
+                    <ul>
+                        <li>เขียนโปรแกรมตามที่ได้รับมอบหมายโดยใช้ Oracle Developer From, Report, ภาษา SQL, PL/SQL ในการจัดการระบบอสังหาริมทรัพย์ให้กับลูกค้า ตามที่ได้รับมอบหมาย เช่น CBRE, Supalai, Plan Estate, Bitech</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2><i class="fas fa-graduation-cap"></i> ประวัติการศึกษา</h2>
+                <div class="item">
+                    <h3>สถาบันราชภัฏสวนสุนันทา</h3>
+                    <p class="subtitle">ปริญญาตรีวิทยาศาสตร์บัณฑิต วิทยาการคอมพิวเตอร์ | จบการศึกษาปี พ.ศ. 2544</p>
+                </div>
+                <div class="item">
+                    <h3>มหาวิทยาลัยรามคำแหง</h3>
+                    <p class="subtitle">ปริญญาตรีนิติศาสตร์บัณฑิต นิติศาสตร์ | จบการศึกษาปี พ.ศ. 2564</p>
+                </div>
+                 <div class="item">
+                    <h3>เนติบัณฑิตไทย / สภาทนายความ</h3>
+                    <p class="subtitle">ประกาศนียบัตรเนติบัณฑิตไทย รุ่นที่ 78 | ประกาศนียบัตรใบอนุญาตว่าความ รุ่นที่ 64 | ปัจจุบัน</p>
+                </div>
+            </section>
+        </div>
+
+        <div class="sidebar">
+            <section class="section">
+                <h2><i class="fas fa-code"></i> ทักษะความเชี่ยวชาญ</h2>
+                <ul class="skills-list">
+                    <!-- Mapping skills to percentages: ดีมาก=90%, ดี=70%, พอใช้=50% -->
+                    <li class="skill-item">
+                        <div class="skill-name">
+                            <span>PL/SQL oracle database</span>
+                            <span class="duration">24 ปี</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" style="width: 90%;"></div>
+                        </div>
+                    </li>
+                    <li class="skill-item">
+                        <div class="skill-name">
+                            <span>Oracle Enterprise business suite</span>
+                            <span class="duration">9 ปี</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" style="width: 90%;"></div>
+                        </div>
+                    </li>
+                    <li class="skill-item">
+                        <div class="skill-name">
+                            <span>Oracle Form / Report / Web logic</span>
+                            <span class="duration">15 ปี</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" style="width: 90%;"></div>
+                        </div>
+                    </li>
+                    <li class="skill-item">
+                        <div class="skill-name">
+                            <span>การทำ Interface (EBS ISG, Node JS)</span>
+                            <span class="duration">7 ปี</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" style="width: 90%;"></div>
+                        </div>
+                    </li>
+                    <li class="skill-item">
+                        <div class="skill-name">
+                            <span>NodeJs, Java TypeScript</span>
+                            <span class="duration">7 ปี</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" style="width: 70%;"></div>
+                        </div>
+                    </li>
+                    <li class="skill-item">
+                        <div class="skill-name">
+                            <span>พื้นฐาน Business PR, PO, AR, GL</span>
+                            <span class="duration">15 ปี</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" style="width: 70%;"></div>
+                        </div>
+                    </li>
+                     <li class="skill-item">
+                        <div class="skill-name">
+                            <span>ความรู้ด้านกฎหมายแพ่ง อาญา</span>
+                            <span class="duration">1 ปี</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" style="width: 50%;"></div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </div>
+	
+
+<!-- Programming Skills -->
+<section>
+<div class="card">
+<h2>Programming Skills (Years)</h2>
+<canvas id="programmingChart"></canvas>
+</div>
+</section>
+
+<!-- ERP / Business -->
+<section>
+<div class="card">
+<h2>ERP & Business Skills</h2>
+<canvas id="erpChart"></canvas>
+</div>
+</section>
+
+<!-- Radar Overview -->
+<section>
+<div class="card">
+<h2>Skill Overview</h2>
+<canvas id="radarChart"></canvas>
+</div>
+</section>
+
+<!-- Experience -->
+<section>
+<div class="card">
+<h2>ประสบการณ์ทำงาน</h2>
+<canvas id="experienceChart"></canvas>
+</div>
+</section>
+
+<footer>
+© 2025 Suebpong Sunsujjanont
+</footer>
+
+<script>
+// Programming Skills
+new Chart(document.getElementById('programmingChart'),{
+  type:'bar',
+  data:{
+    labels:[
+      'PL/SQL Oracle',
+      'Oracle Forms/Report',
+      'Node.js',
+      'Java',
+      'TypeScript',
+      'Visual Basic .NET',
+      'IBM WebSphere'
+    ],
+    datasets:[{
+      label:'Years',
+      data:[24,15,7,3,7,4,2],
+      backgroundColor:'#2563eb'
+    }]
+  },
+  options:{responsive:true}
+});
+
+// ERP & Business
+new Chart(document.getElementById('erpChart'),{
+  type:'bar',
+  data:{
+    labels:[
+      'Oracle ERP',
+      'Oracle EBS Interface',
+      'SAP B1',
+      'IBM DB2',
+      'Accounting (AP/AR/GL)',
+      'Real Estate System',
+      'Legal Knowledge'
+    ],
+    datasets:[{
+      label:'Experience Level',
+      data:[95,90,70,70,85,85,60],
+      backgroundColor:'#16a34a'
+    }]
+  },
+  options:{
+    indexAxis:'y',
+    scales:{x:{max:100}}
+  }
+});
+
+// Radar Overview
+new Chart(document.getElementById('radarChart'),{
+  type:'radar',
+  data:{
+    labels:[
+      'Programming',
+      'Database',
+      'ERP',
+      'Business',
+      'Integration',
+      'Law'
+    ],
+    datasets:[{
+      label:'Skill Level',
+      data:[90,95,90,85,88,60],
+      backgroundColor:'rgba(37,99,235,.3)',
+      borderColor:'#2563eb'
+    }]
+  },
+  options:{scales:{r:{max:100}}}
+});
+
+// Experience Timeline Chart
+new Chart(document.getElementById('experienceChart'),{
+  type:'bar',
+  data:{
+    labels:[
+      'CPS Consulting',
+      'Thai Inter System',
+      'Avalant',
+      'G-Able (CDG)',
+      'Digital Experience'
+    ],
+    datasets:[{
+      label:'Years',
+      data:[9.5,10,2,2,2],
+      backgroundColor:'#9333ea'
+    }]
+  },
+  options:{responsive:true}
+});
+</script>
+
+</body>
+</html>
