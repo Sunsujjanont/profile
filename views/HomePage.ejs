@@ -15,7 +15,56 @@
 
   <style>
     body { font-family: 'Inter', sans-serif; }
+
+    .profile-logo {
+        width: 100px;
+        height: 100px;
+        object-fit: cover; /* Ensures image isn't stretched */
+    }    
+
+    .btn-move {
+      padding: 10px 20px;
+      background-color: #70b1f1;
+      color: white;
+      border: none;
+      transition: transform 0.3s ease; /* กำหนดให้การขยับลื่นไหล */
+      cursor: pointer;
+    }
+
+    .btn-move:hover {
+      background-color:  #007bff;
+      transform: translateY(-5px); /* ขยับขึ้นเมื่อเมาส์วาง */
+    }
+
+    .shadow-move {
+      padding: 10px 20px;
+      background-color: #e6eaed;
+      color: rgb(7, 0, 0);
+      border: none;
+      transition: transform 0.3s ease; /* กำหนดให้การขยับลื่นไหล */
+      cursor: pointer;
+    }
+
+    .shadow-move:hover {
+      background-color:  #e29844;
+      transform: translateY(-5px); /* ขยับขึ้นเมื่อเมาส์วาง */
+    }
+
+    .bg-move {
+      padding: 10px 20px;
+      background-color: hsl(210, 22%, 96%);
+      color: rgb(7, 0, 0);
+      border: none;
+      transition: transform 0.3s ease; /* กำหนดให้การขยับลื่นไหล */
+      cursor: pointer;
+    }
+
+    .bg-move:hover {
+      background-color:  #fafaf9;
+      transform: translateY(-5px); /* ขยับขึ้นเมื่อเมาส์วาง */
+    }    
   </style>
+
 </head>
 
 <body class="text-gray-800 bg-white">
@@ -23,25 +72,25 @@
 <!-- ================= HEADER ================= -->
 <header class="fixed top-0 w-full bg-white shadow-sm z-50">
   <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-    <div class="text-xl font-bold">CompanyLogo</div>
+    <div><img src="/images/logo.jpg" alt="Logo Company" class="profile-logo"></div>
 
     <nav class="hidden md:flex gap-6">
-      <a href="/" class="hover:text-orange-500">Home</a>
-      <a href="/about" class="hover:text-orange-500">About</a>
-      <a href="/services" class="hover:text-orange-500">Services</a>
-      <a href="/references" class="hover:text-orange-500">Client References</a>
-      <a href="/contact" class="hover:text-orange-500">Contact</a>
+      <a href="/" class="hover:text-blue-500">Home</a>
+      <a href="/about" class="hover:text-blue-500">About</a>
+      <a href="/services" class="hover:text-blue-500">Services</a>
+      <a href="/references" class="hover:text-blue-500">Client References</a>
+      <a href="/contact" class="hover:text-blue-500">Contact</a>
     </nav>
 
     <a href="/contact"
-       class="bg-orange-500 text-white px-4 py-2 rounded-xl">
+       class="btn-move px-4 py-2 rounded-xl">
       Contact
     </a>
   </div>
 </header>
 
 <!-- ================= HERO ================= -->
-<section class="pt-32 bg-gradient-to-r from-white to-orange-50">
+<section class="pt-32 bg-gradient-to-r from-white to-blue-50">
   <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 px-6 py-20 items-center">
     <div>
       <h1 class="text-4xl md:text-5xl font-bold mb-6">
@@ -52,18 +101,18 @@
       </p>
       <div class="flex gap-4">
         <a href="/services"
-           class="bg-orange-500 text-white px-6 py-3 rounded-xl">
+           class="btn-move px-6 py-3 rounded-xl">
           Our Services
         </a>
         <a href="/contact"
-           class="border border-orange-500 text-orange-500 px-6 py-3 rounded-xl">
+           class="btn-move px-6 py-3 rounded-xl">
           Contact Us
         </a>
       </div>
     </div>
 
     <!-- Hero Image Placeholder -->
-    <div class="h-64 bg-orange-100 rounded-2xl"></div>
+    <div class="h-64 bg-blue-100 rounded-2xl"></div>
   </div>
 </section>
 
@@ -71,23 +120,23 @@
 <section class="py-20 bg-white">
   <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 px-6">
 
-    <div class="shadow rounded-2xl p-6 text-center">
-      <div class="text-3xl font-bold text-orange-500 mb-2">10+</div>
+    <div class="shadow-move rounded-2xl p-6 text-center">
+      <div class="text-3xl font-bold text-blue-500 mb-2">10+</div>
       <div class="text-gray-600">Years Experience</div>
     </div>
 
-    <div class="shadow rounded-2xl p-6 text-center">
-      <div class="text-3xl font-bold text-orange-500 mb-2">100+</div>
+    <div class="shadow-move rounded-2xl p-6 text-center">
+      <div class="text-3xl font-bold text-blue-500 mb-2">100+</div>
       <div class="text-gray-600">Clients</div>
     </div>
 
-    <div class="shadow rounded-2xl p-6 text-center">
-      <div class="text-3xl font-bold text-orange-500 mb-2">100+</div>
+    <div class="shadow-move rounded-2xl p-6 text-center">
+      <div class="text-3xl font-bold text-blue-500 mb-2">100+</div>
       <div class="text-gray-600">Projects</div>
     </div>
 
-    <div class="shadow rounded-2xl p-6 text-center">
-      <div class="text-3xl font-bold text-orange-500 mb-2">Expert</div>
+    <div class="shadow-move rounded-2xl p-6 text-center">
+      <div class="text-3xl font-bold text-blue-500 mb-2">Expert</div>
       <div class="text-gray-600">Professional Team</div>
     </div>
 
@@ -100,17 +149,17 @@
     <h2 class="text-3xl font-bold text-center mb-12">Our Services</h2>
 
     <div class="grid md:grid-cols-3 gap-8">
-      <div class="bg-white rounded-2xl shadow p-8">
+      <div class="bg-move rounded-2xl shadow p-8">
         <h3 class="text-xl font-semibold mb-2">Maintenance & Support</h3>
         <p class="text-gray-600">Reliable system maintenance and support</p>
       </div>
 
-      <div class="bg-white rounded-2xl shadow p-8">
+      <div class="bg-move rounded-2xl shadow p-8">
         <h3 class="text-xl font-semibold mb-2">System Integration</h3>
         <p class="text-gray-600">Seamless integration with your business</p>
       </div>
 
-      <div class="bg-white rounded-2xl shadow p-8">
+      <div class="bg-move rounded-2xl shadow p-8">
         <h3 class="text-xl font-semibold mb-2">User Training</h3>
         <p class="text-gray-600">Professional training for your team</p>
       </div>
@@ -119,11 +168,11 @@
 </section>
 
 <!-- ================= CTA ================= -->
-<section class="py-20 bg-orange-500 text-white text-center">
+<section class="py-20 bg-blue-500 text-white text-center">
   <h2 class="text-3xl font-bold mb-4">Let’s Work Together</h2>
   <p class="mb-8">ติดต่อเราเพื่อเริ่มต้นความสำเร็จของธุรกิจคุณ</p>
   <a href="/contact"
-     class="bg-white text-orange-500 px-8 py-3 rounded-xl font-semibold">
+     class="bg-white text-blue-500 px-8 py-3 rounded-xl font-semibold">
     Contact Us
   </a>
 </section>
